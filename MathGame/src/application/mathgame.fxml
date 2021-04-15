@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="MainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="921.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
+  <children>
+    <AnchorPane id="scoreAnchorPane" prefHeight="423.0" prefWidth="299.0" style="" styleClass="rightAnchorPane" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="622.0" AnchorPane.topAnchor="91.0">
+      <children>
+        <Label prefHeight="47.0" prefWidth="101.0" styleClass="headingFont" text="Your Score" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+          <stylesheets>
+            <URL value="@application.css" />
+          </stylesheets>
+        </Label>
+        <Label fx:id="marks" layoutX="54.0" layoutY="178.0" prefHeight="55.0" prefWidth="192.0" styleClass="headingFont" text="0">
+          <stylesheets>
+            <URL value="@application.css" />
+          </stylesheets>
+        </Label>
+      </children>
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </AnchorPane>
+    <AnchorPane layoutX="1.0" layoutY="515.0" prefHeight="37.0" prefWidth="921.0" styleClass="bottomPaneBackground">
+      <children>
+        <Label fx:id="wrongMessage" layoutX="403.0" layoutY="7.0" prefWidth="381.0" styleClass="wrongAnswer" text="Ooops! worng answer. Please Try again..." textOverrun="CLIP" visible="false">
+          <stylesheets>
+            <URL value="@application.css" />
+          </stylesheets>
+        </Label>
+        <Label fx:id="rightMessage" layoutX="299.0" layoutY="3.0" prefHeight="26.0" prefWidth="550.0" styleClass="rightAnswer" text="well done!! Right answer.You have obtained 10 marks" visible="false">
+          <stylesheets>
+            <URL value="@application.css" />
+          </stylesheets>
+        </Label>
+      </children>
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </AnchorPane>
+    <AnchorPane id="headingAnchorPane" prefHeight="94.0" prefWidth="921.0" style="" styleClass="headingPaneBackground" AnchorPane.bottomAnchor="459.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </AnchorPane>
+    <Label layoutX="353.0" layoutY="194.0" prefHeight="47.0" prefWidth="269.0" styleClass="subheadingFont" text="Solve the following">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+    <TextField fx:id="answer" layoutX="445.0" layoutY="337.0" prefHeight="47.0" prefWidth="269.0" styleClass="subheadingFont">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </TextField>
+    <Label layoutX="368.0" layoutY="337.0" prefHeight="47.0" prefWidth="107.5" styleClass="subheadingFont" text="=">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+    <Button layoutX="441.0" layoutY="419.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="55.0" prefWidth="269.0" text="Submit &amp; Next" />
+    <Label fx:id="number1" layoutX="353.0" layoutY="260.0" prefHeight="47.0" prefWidth="148.0" styleClass="subheadingFont" text="12">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+    <Label fx:id="operator" layoutX="513.0" layoutY="260.0" minWidth="7.0" prefHeight="47.0" prefWidth="66.0" styleClass="subheadingFont" text="+">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+    <Label fx:id="number2" layoutX="579.0" layoutY="260.0" prefHeight="47.0" prefWidth="148.0" styleClass="subheadingFont" text="23">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+    <MenuBar prefWidth="622.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="94.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Additon">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#sumOfDecimalNumbers" text="Decimal number" />
+            <MenuItem mnemonicParsing="false" onAction="#sumOfFloatingPointNumbers" text="Floating point numbers" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Subtraction">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#subOfDecimalNumbers" text="Decimal Numbers" />
+            <MenuItem mnemonicParsing="false" onAction="#subOfFloatingPointNumbers" text="Floating Point Numbers" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Multiplication">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#multiplicationOfDecimalNumbers" text="Decimal Numbers" />
+            <MenuItem mnemonicParsing="false" onAction="#multiplicationOfFloatingPointNumbers" text="Floating Point Numbers" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Division">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#divisonOfDecimalNumbers" text="Decimal Numbers" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Label layoutX="713.0" layoutY="199.0" styleClass="subheadingFont" text="Marks : 10">
+      <stylesheets>
+        <URL value="@application.css" />
+      </stylesheets>
+    </Label>
+  </children>
+</AnchorPane>
